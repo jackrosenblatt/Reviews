@@ -1,0 +1,130 @@
+/*Moves the webpage title to the middle*/
+.navbar-brand {
+  transform: translateX(-50%);
+  left: 50%;
+  position: absolute;
+}
+
+
+body {
+  box-sizing: border-box;
+  background-color: #5888b5;
+}
+
+#leftArrow, #rightArrow{
+  position: relative;
+  height: 275px;
+  width: 5%;
+  background-color: rgba(255,255,255,.1);
+  border: 1px solid white;
+  float:left;
+  margin-top: 159px;
+  border-radius: 5px;
+}
+
+#rightArrow{
+  float: right;
+}
+
+#leftArrow:hover, #rightArrow:hover{
+  background-color: rgba(0,0,0,.75);
+  color: rgba(255,255,255,.75);
+}
+
+.featuredIcons{
+  width: auto;
+  height: 275px;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 0px;
+}
+
+img{
+  width: 15%;
+  height: auto;
+
+}
+
+button:focus{
+  outline: 0;
+}
+
+.featured-container {
+  background-color: #1d426e;
+  width: 90%;
+  height: 275px;
+  border-radius: 5px;
+  border: 2px solid black;
+  position: relative;
+}
+
+.container-fluid {
+  padding-left: 0;
+}
+
+.featured-header {
+  text-align: center;
+  padding-top: 110px;
+}
+
+/*sets the design of the dropdown button*/
+.dropbtn {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(255, 255, 255, 0.1);
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: -15px;
+  z-index: 1;
+}
+
+/*sets the design of the dropdown button when it is hovered over*/
+.dropbtn:hover {
+  background-color: green;
+}
+
+/*sets the design of the dropdown content container*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/*sets the design of the dropdown content*/
+.dropdown-content {
+  display: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 39px;
+  background-color: rgba(0, 0, 0, 0.75);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/*sets the design of the individual dropdown content categories*/
+.dropdown-content a {
+  color: rgba(255, 255, 255, 0.75);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/*sets the design of the individual dropdown content categories when they are hovered over*/
+.dropdown-content a:hover {
+  background-color: black;
+}
+
+/*sets the design of the  dropdown content when the button is hovered over*/
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/*sets the design of the dropdown button when it is hovered over*/
+.dropdown:hover .dropbtn {
+  background-color: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.75);
+}
