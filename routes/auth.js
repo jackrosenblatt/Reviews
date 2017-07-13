@@ -5,7 +5,7 @@ var User = require('../models/models').User;
 
 module.exports = ((passport) => {
   router.get('/signup', ((req, res, next) => {
-    res.render('signup');
+    res.render('sign_up');
   }))
 
   router.post('/signup', ((req, res, next) => {
@@ -14,9 +14,9 @@ module.exports = ((passport) => {
     req.checkBody('password_confirm', 'Error: Password confirmation is empty').notEmpty();
 
     if (req.validationErrors()) {
-      res.render('/signup')
+      res.render('/sign_up')
     } else if (req.body.password !== req.body.password_confirm) {
-      res.render('/signup')
+      res.render('/sign_up')
     } else {
       var newUser = new User({
         username: req.body.username,
@@ -30,7 +30,7 @@ module.exports = ((passport) => {
   }))
 
   router.get('/login', ((req, res, next) => {
-    res.render('login');
+    res.render('sign_in');
   }))
 
   router.post('/login', passport.authenticate('local', {
@@ -43,14 +43,6 @@ module.exports = ((passport) => {
       res.redirect('/login')
     })
   }))
-
-  router.use('/', ((req, res, next) => {
-    if (!req.user)
-      res.redirect('/login');
-    else {
-      next()
-    }
-  }));
 
   return router;
 });
