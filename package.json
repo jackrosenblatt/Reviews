@@ -1,0 +1,26 @@
+{
+  "name": "reviews",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "bcrypt": "^1.0.2",
+    "body-parser": "^1.17.2",
+    "email-existence": "^0.1.5",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "express-validator": "^3.2.0",
+    "jsonfile": "^3.0.0",
+    "localstorage": "^0.1.0",
+    "modal": "^1.2.0",
+    "mongoose": "^4.11.0",
+    "nodemon": "^1.11.0",
+    "store": "^2.0.12"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}

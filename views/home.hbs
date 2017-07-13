@@ -1,0 +1,31 @@
+<!--Adds the navbar to the home page-->
+{{>navbar}}
+
+<h1>Hello {{name}}</h1>
+
+<!--Adds the left and right arrows to move through the features-->
+<div class="movementbtn">
+  <button id='leftArrow'><span class='glyphicon glyphicon-arrow-left'></span></button>
+  <button id='rightArrow'><span class='glyphicon glyphicon-arrow-right'></span></button>
+</div>
+
+<h1 class="featured-header">Featured</h1>
+<div class="featured-container container-fluid">
+  <div class='dropdown'>
+    <button onclick='toggleDropdown()' class='dropbtn'>Categories</button>
+    <div id="catDropdown" class="dropdown-content">
+      <a href='#'>Cooking Recipes</a>
+      <a href='#'>Video Games</a>
+      <a href='#'>Books</a>
+      <a href='#'>Customer Service</a>
+      <a href='#'>TV Shows / Movies</a>
+      <a href='#'>Misc.</a>
+    </div>
+  </div>
+
+  <div class="featuredIcons">
+    <!-- <img src="https://eat24-files-live.s3.amazonaws.com/cuisines/v4/thai.jpg?Signature=BFZgW8PZ7fwR6MYDbAfsTlPk7IQ%3D&Expires=1498179399&AWSAccessKeyId=AKIAIEJ2GCCJRT63TBYA">
+      <img src="http://www.smithfieldfoods.com/images/home/packaged-brands/armour-food.jpg">
+      <img src="http://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/7/18/3/FNM_090111-Alaska_s4x3.jpg.rend.hgtvcom.966.725.jpeg"> -->
+  </div>
+</div>
