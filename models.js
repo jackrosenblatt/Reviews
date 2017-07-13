@@ -1,31 +1,13 @@
-var mongoose = require('mongoose');
+import mongoose from 'mongoose';
+var Schema = mongoose.Schema;
 
-var Token = mongoose.model('token', {
-  userId: String,
-  token: String,
-  createdAt: Date
-})
+var userSchema = new Schema({
+  username: String,
+  password: String
+});
 
-var User = mongoose.model('user', {
-  fname: {
-    type: String,
-    required: true
-  },
-  lname: {
-    type: String,
-    required: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  password: {
-    type: String,
-    required: true
-  }
-})
+var User = mongoose.model('User', userSchema);
 
 module.exports = {
-  Token: Token,
-  User: User,
+  User: User
 };

@@ -1,13 +1,20 @@
 // This is the top level Express server application file.
 var express = require('express');
-var path = require('path');
-var bodyParser = require('body-parser');
 var validator = require('express-validator');
 var exphbs = require('express-handlebars');
+var session = require('express-session')
+var mongoose = require('mongoose');
+var MongoStore = require('connect-mongo')(session);
+var path = require('path');
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
+
+var index = require('./routes/index');
+var auth = require('./routes/auth');
 
 var app = express();
-
-var mongoose = require('mongoose');
 
 mongoose.connect(process.env.MONGODB_URI);
 
